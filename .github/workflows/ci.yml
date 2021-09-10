@@ -8,7 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
-      version:
+      matrix:
+        version:
           - '1.0'
         os:
           - ubuntu-latest
