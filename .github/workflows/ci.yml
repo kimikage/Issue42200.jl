@@ -20,6 +20,7 @@ jobs:
             version: 'nightly'
             arch: x86
     steps:
+      - run: export JULIA_LLVM_ARGS=-print-after-all
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
