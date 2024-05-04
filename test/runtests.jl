@@ -20,5 +20,7 @@ f(c1, c2, opacity) = lighten.(c1, c2, opacity)
 using InteractiveUtils
 versioninfo()
 
+show(Base.JLOptions())
+
 @code_llvm  dump_module=true raw=true  f(c, cs, 0.8)
 @code_native f(c, cs, 0.8) # error
